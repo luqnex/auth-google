@@ -12,21 +12,11 @@ export function SignIn() {
             .catch((err) => {
                 console.log(err)
             })
-
-        let facebook_provider = new firebase.auth.FacebookAuthProvider()
-        firebase.auth().signInWithPopup(facebook_provider)
-            .then((res) => {
-                console.log(res)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
     }
 
     return (
         <div className="content">
             <button onClick={SignInWithFirebase}>Sign In With Google</button>
-            <button onClick={SignInWithFirebase}>Sign In With Facebook</button>
         </div>
     )
 }
