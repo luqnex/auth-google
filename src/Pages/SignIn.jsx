@@ -2,6 +2,8 @@ import React from 'react'
 import { firebase } from '../Firebase/firebase'
 import './Global.css'
 
+import LogoGoogle from '../assets/logo-google.png'
+
 export function SignIn() {
     const SignInWithFirebase = () => {
         let google_provier = new firebase.auth.GoogleAuthProvider()
@@ -14,9 +16,14 @@ export function SignIn() {
             })
     }
 
+    
+
     return (
         <div className="content">
-            <button onClick={SignInWithFirebase}>Sign In With Google</button>
+            <button onClick={SignInWithFirebase}>
+                <img src={LogoGoogle} alt="Logo Google" />
+                Sign In With Google
+            </button>
         </div>
     )
 }

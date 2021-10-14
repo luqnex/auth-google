@@ -10,8 +10,8 @@ export function Home() {
 
     return (
         <div className="content">
-            <h1>Home</h1>
-            <button onClick={signOut}>Sign Out</button>
+            <h1>Your is loged!</h1>
+            <button className="sign-out" onClick={signOut}>Sign Out</button>
         </div>
     )
 }

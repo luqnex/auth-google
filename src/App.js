@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './App.css';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import { Home } from './Pages/Home'
 import { SignIn } from './Pages/SignIn'
@@ -25,7 +25,7 @@ function App() {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={Home} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </BrowserRouter>
     );
@@ -34,6 +34,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/" component={SignIn} />
+          <Redirect path="*" component={SignIn} />
         </Switch>
       </BrowserRouter>
     );

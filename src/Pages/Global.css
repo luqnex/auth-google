@@ -16,13 +16,36 @@
 }
 
 .content button {
-    width: 200px;
-    background: #57523E;
+    width: 250px;
+    background: #e6e4e0;
     border: none;
     padding: 8px 30px;
     border-radius: 8px;
     margin-top: 10px;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     outline: none;
-    color: #D7D8C9;
+    color: #242424;
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.content button:hover {
+    background: rgb(180, 180, 180);
+    color: #070707;
+}
+
+.content button img {
+    width: 30px;
+}
+
+.content .sign-out {
+    width: 150px;
+    justify-content: center;
 }
